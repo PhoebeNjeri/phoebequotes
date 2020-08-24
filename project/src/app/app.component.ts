@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-project = 'make a quote application'
+project:string[];
+
+constructor(){
+  this.project = ['create quote', 'upvote and downvote quote', 'delete quote', 'number of upvotes and downvotes']
+  
+}
 }
