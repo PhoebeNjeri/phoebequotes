@@ -1,0 +1,19 @@
+.del {
+    background:greenyellow;
+    color: bisque;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+}
+.quote{
+    background: lightpink;
+    padding: 10px;
+    border-bottom:1px lightyellow dotted;
+
+}
+
+.is-complete {
+    text-decoration: line-through;
+}
