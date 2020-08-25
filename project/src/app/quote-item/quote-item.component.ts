@@ -8,7 +8,6 @@ import { Quotes } from 'src/app/Quotes';
 })
 export class QuoteItemComponent implements OnInit {
   @Input() quote: Quotes;
-  @Output() isComplete = new EventEmitter<boolean>();
   
 
   constructor() { }

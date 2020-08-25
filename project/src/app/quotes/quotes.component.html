@@ -5,12 +5,14 @@
    <ul>
         <div *ngFor='let quotes of quotes;let i = index'>
             <li>{{quotes.name}}</li>
+            <button  (click)='toggleDetails(i)'>Toggle Details</button>
+
 
             <app-quotes-item  *ngIf='quotes.showDescription'[quotes]='quotes'></app-quotes-item>
           </div>
 </ul>
 
 
-<app-quote-item *ngFor="let quote of quotes" [quote]="quote">
-    <li>{{ quote.title}}</li>
-</app-quote-item>
+<p *ngIf='quotes.length >5'tou have too many quotes></p>
+
+</div>

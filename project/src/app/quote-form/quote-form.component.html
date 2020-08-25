@@ -1,38 +1,22 @@
-
-<form (ngSubmit)="submitQuote()" class="card-body ">
-<!--Header-->
-<div class="text-center">
-
-  <h3 class="white-text"> Add Quote <mdb-icon far icon="arrow-alt-circleDownvotes:0-down"></mdb-icon>
-  </h3>
-  <hr class="hr-light">
+<div class="container-fluid">
+  <h2 class="text-center">CREATE YOUR QUOTE.</h2>
+  <hr>
+  <form (ngSubmit)='submitQuotes(quotesForm.value)'  #quotesForm='ngForm'>
+   <div class="form-group">
+    <label for="submiter">Write your Quote</label>
+    <textarea  cols="30" rows="10" required [(ngModel)]="quote.submitter" class="form-control" name="submitter" #submitter="ngModel" id="submitter" type="text" class="form-control"> </textarea>
+    <div class="alert alert-danger" *ngIf="submitter.touched && !submitter.valid">the quote is required</div>
 </div>
-
-<!--Body-->
-
-<div class="md-form">
-  <i class="fas fa-user prefix white-text"></i>
-  <input type="text" id="form3" class="form-control " name="publisher" [(ngModel)]="quoteEditor" mdbInput>
-  <label for="form3">Person's name</label>
+<div class="form-group">
+    <label for="author">Author's Name</label>
+    <input required [(ngModel)]="quote.author" class="form-control" name="author" #author="ngModel" id="author" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="author.touched && !author.valid">Author name is required</div>
 </div>
-<div class="md-form">
-  <i class="fas fa-quote-left prefix white-text"></i>
-  <input type="text" id="form2" class="form-control" name="quote" [(ngModel)]="quoteWords" mdbInput>
-  <label for="form2">Quotes</label>
+<div class="form-group">
+  <label for="quote">Submitter</label>
+  <input required [(ngModel)]="quote.quote" class="form-control" name="quote" #quote="ngModel" id="quote"
+    class="form-control">
+  <div class="alert alert-danger" *ngIf="quote.touched && !quote.valid">The submitter name is required</div>
 </div>
-
-<div class="md-form">
-  <i class="fas fa-user prefix white-text"></i>
-  <input type="text" id="form4" class="form-control" name="author" [(ngModel)]="quoteAuthor" mdbInput>
-  <label for="form4">Author</label>
-</div>
-<div class="md-form">
-  <i class="far fa-clock prefix white-text"></i>
-  <input type='date' id="form5" class="form-control white-text" name="completeDate" [(ngModel)]="quoteDate" mdbInput>
-  <label class=" white-text" for="form5">Completion Date</label>
-  </div>
-  <div class="text-center">
-    <button type="submit" mdbBtn color="indigo" class="waves-light btn btn-info" mdbWavesEffect>Post Quote</button>
-    <hr class="hr-light mb-3 mt-4">
-  </div>
+<button type="submit" class="btn btn-primary">submit</button>
 </form>

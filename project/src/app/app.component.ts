@@ -8,8 +8,11 @@ import { Quotes } from './Quotes';
 })
 export class AppComponent {
  title = 'project';
-   Quote:Quotes[] = [
+ }
+ {
+   Quote: Quotes[''] = [
     new Quotes(1, 'Be yourself everyone else is already taken', 'description:quote by me,'),
-    new Quotes(2,'Be the change that you wish to see in the world', 'description:quote by me, ')
+    new Quotes(2,'Be the change that you wish to see in the world', 'description:quote by me,')
 ];
-} 
+}
+ 
