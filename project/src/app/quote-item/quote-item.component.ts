@@ -8,18 +8,20 @@ import { Quotes } from 'src/app/Quotes';
 })
 export class QuoteItemComponent implements OnInit {
   @Input() quote: Quotes;
-  
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  quotesDelete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
+  quoteComplete(complete:true){
+    
+  }
 
   constructor() { }
 
   ngOnInit(): void {
  }
- onToggle(quote){
-   console.log('toggle');
- }
- onDelete(quote){
-   console.log('delete');
- }
+ 
 
 
   }

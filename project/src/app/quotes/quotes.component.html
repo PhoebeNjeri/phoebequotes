@@ -1,16 +1,18 @@
 <div class="container">
     <h1>POST QUOTES.</h1>
     <hr>
+    
 
-   <ul>
+    <div class="row">
+        <div class="col-md-12">
         <div *ngFor='let quotes of quotes;let i = index'>
             <li>{{quotes.name}}</li>
             <button  (click)='toggleDetails(i)'>Toggle Details</button>
 
 
-            <app-quotes-item  *ngIf='quotes.showDescription'[quotes]='quotes'></app-quotes-item>
+            <app-quote-item  *ngIf='quotes.description'[quote]='quotes'></app-quote-item>
           </div>
-</ul>
+
 
 
 <p *ngIf='quotes.length >5'tou have too many quotes></p>

@@ -8,7 +8,7 @@ import { Quotes } from 'src/app/Quotes';
 })
 export class QuotesComponent {
   quotes:Quotes[] = [
-     new Quotes(1, 'Be yourself everyone else is already taken', 'description:quoted by me'),
+     new Quotes(1, 'Be who you are and say what you feel, because those who mind dont matter and those who matter dont mind', 'description:quoted by me'),
     new Quotes(2, 'Be the change that you wish to see in the world', 'description:quoted by me'),
   ];
   addNewQuotes(quotes){

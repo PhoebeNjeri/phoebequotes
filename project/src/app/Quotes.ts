@@ -2,7 +2,8 @@ export class Quotes {
     id:number;
     title:string;
     description:Boolean;
-   constructor(id,title,description,){
-       this.id=id,this.title=title,this.description=false
+    completeDate:Date
+   constructor(id,title,description,completeDate){
+       this.id=id,this.title=title,this.description=false,this.completeDate= new Date
    } 
 }

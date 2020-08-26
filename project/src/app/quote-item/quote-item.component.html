@@ -1,9 +1,4 @@
-<div>
-    <p>
-        <input (change) ="onToggle(quote)"type="checkbox"/>
-        {{quote.title}}
-        <button (click)="onDelete(quote)">x</button>
-
-    </p>
-
-</div>
+<p>
+    {{quote.description}}
+  </p>
+  <button (click)= 'quoteComplete(true)'>Complete</button>
