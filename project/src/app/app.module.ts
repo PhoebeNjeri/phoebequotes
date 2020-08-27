@@ -9,6 +9,7 @@ import { QuoteItemComponent } from './quote-item/quote-item.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +19,15 @@ import { DateCountPipe } from './date-count.pipe';
     QuoteFormComponent,
     StrikethroughDirective,
     DateCountPipe,
+    LikeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    
-    
+    AppRoutingModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

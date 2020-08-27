@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 import { Quotes } from 'src/app/Quotes';
 
 @Component({
@@ -8,20 +9,34 @@ import { Quotes } from 'src/app/Quotes';
 })
 export class QuotesComponent {
   quotes: Quotes[] = [
-    new Quotes(1, 'Be who you are and say what you feel, because those who mind dont matter and those who matter dont mind', 'description:quoted by nickiezer','new Date(2020,3,14','submitted by phoebe','walter'),
-    new Quotes(2, 'Be the change that you wish to see in the world', 'description:quoted by njezzy','new Date(2019,6,9','submitted by phoebe','myles'),
+    new Quotes(
+      1, 'Be who you are and say what you feel, because those who mind dont matter and those who matter dont mind', 
+      'Walter', 'Submitted by phoebe', new Date(2020, 3, 14)
+    ),
+    new Quotes(
+      2, 'Be the change that you wish to see in the world', 
+      'Myles', 'Submitted by phoebe', new Date(2019, 6, 9)
+    )
   ];
 
-  constructor() {}
-  
-  addNewQuotes(quotes) {
-    let quotesLength = this.quotes.length;
-    quotes.id = quotesLength+1;
-    quotes.completeDate = new Date(quotes.completeDate)
-    this.quotes.push(quotes)
+  constructor(private router: Router) {}
+
+  toggleDetails(id: number) {
+    // Navigate to the quote details.
+    //
   }
   
-  toggleDetails(index) {}
+  addNewQuotes(quotes) {    
+    // Create the new ID.
+    let quotesLength = this.quotes.length;
+    quotes.id = quotesLength + 1;
+
+    // Convert the incoming date string into a date object.
+    quotes.completeDate = new Date(quotes.completeDate)
+
+    // Add the new quote to the list of quotes.
+    this.quotes.push(quotes)
+  }
   
   deleteQuotes(isComplete, index) {
     if (isComplete) {

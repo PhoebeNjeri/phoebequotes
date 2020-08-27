@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Quotes } from './Quotes';
+import { QuotesComponent } from './quotes/quotes.component'
+import { LikeComponent } from './like/like.component'
 
 const routes: Routes = [
   {
-       path: './quote-form.component.html',
-       component: Quotes,
-   },
- {
-   path:'',
-   component:Quotes
- }
+    path:'',
+    component: QuotesComponent
+  }, { 
+    path: 'quotes/:id',
+    component: LikeComponent,
+  }
 ];
 
 @NgModule({

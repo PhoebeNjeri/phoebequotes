@@ -1,3 +1,6 @@
-<p>{{quote.description}} </p>
-<p> {{quote.completeDate|dateCount}} </p>
-  <button (click)= 'quoteComplete(true)' class="btn btn-outline-danger">Delete quote</button>
+<p>{{ quote.title }}</p>
+<p>{{ quote.completeDate | dateCount }}</p>
+
+<button (click)="quoteComplete(true)" class="btn btn-outline-danger">
+  Delete quote
+</button>

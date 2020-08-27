@@ -1,22 +1,35 @@
 <div class="container-fluid">
   <h2 class="text-center">CREATE YOUR QUOTE.</h2>
   <hr>
-  <form (ngSubmit)='submitQuotes(quotesForm.value)'  #quotesForm='ngForm'>
-   <div class="form-group">
-    <label for="submiter">Write your Quote</label>
-    <textarea  cols="30" rows="10" required [(ngModel)]="quote.submitter" class="form-control" name="submitter" #submitter="ngModel" id="submitter" type="text" class="form-control"> </textarea>
-    <div class="alert alert-danger" *ngIf="submitter.touched && !submitter.valid">the quote is required</div>
+
+  <form (ngSubmit)='submitQuotes(quotesForm.value)' #quotesForm='ngForm'>
+    <div class="form-group">
+      <label for="title">Write your Quote</label>
+      <textarea id="title" name="title" cols="30" rows="10" class="form-control"
+        [(ngModel)]="quote.title" #title="ngModel" required></textarea>
+      <div class="alert alert-danger" *ngIf="title.touched && !title.valid">
+        The quote is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author's Name</label>
+      <input type="text" name="author" id="author" class="form-control" 
+        [(ngModel)]="quote.author" #author="ngModel" required>
+      <div class="alert alert-danger" *ngIf="author.touched && !author.valid">
+        Author name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="quote">Submitter</label>
+      <input type="text" name="submitter" id="submitter" class="form-control" 
+        [(ngModel)]="quote.submitter" #submitter="ngModel" required>
+      <div class="alert alert-danger" *ngIf="submitter.touched && !submitter.valid">
+        The submitter name is required
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">submit</button>
+  </form>
 </div>
-<div class="form-group">
-    <label for="author">Author's Name</label>
-    <input required [(ngModel)]="quote.author" class="form-control" name="author" #author="ngModel" id="author" type="text" class="form-control">
-    <div class="alert alert-danger" *ngIf="author.touched && !author.valid">Author name is required</div>
-</div>
-<div class="form-group">
-  <label for="quote">Submitter</label>
-  <input required [(ngModel)]="quote.quote" class="form-control" name="quote" #quote="ngModel" id="quote"
-    class="form-control">
-  <div class="alert alert-danger" *ngIf="quote.touched && !quote.valid">The submitter name is required</div>
-</div>
-<button type="submit" class="btn btn-primary">submit</button>
-</form>
