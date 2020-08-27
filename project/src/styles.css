@@ -1,32 +1,17 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import "~bootstrap/dist/css/bootstrap.css"
+body{
+    background-repeat : no-repeat;
+    background-size : cover;
 }
-
-body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    line-height: 1.4;
+h1{
+    color:white;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-
-a {
-   color: grey;
-   text-decoration: none;
+.text-center{
+    color: whitesmoke;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-
-.container {
-    padding: 0;
-}
-
-.btn{
-    display: inline-block;
-    border: none;
-    background: beige;
-    color: blanchedalmond;
-    padding: 7px 20px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: lightblue;
+label{
+color: white;
 }

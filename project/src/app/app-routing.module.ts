@@ -4,7 +4,7 @@ import { Quotes } from './Quotes';
 
 const routes: Routes = [
   {
-       path: './quotes-form.component.html',
+       path: './quote-form.component.html',
        component: Quotes,
    },
  {

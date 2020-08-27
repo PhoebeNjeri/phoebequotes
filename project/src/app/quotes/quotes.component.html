@@ -14,7 +14,9 @@
 
             <div *ngIf='quotes.description'>
          
-          <app-quote-item  [quote]='quotes' (isComplete) = 'deleteQuotes($event,i)'></app-quote-item>
+          <app-quote-item  ngIf='quotes.description' [quote]='quotes' (isComplete) = 'deleteQuotes($event,i)'></app-quote-item>
+          </div>
+          </div>
 
           <div class="col-md-12">
 
