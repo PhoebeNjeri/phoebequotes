@@ -8,8 +8,8 @@ import { Quotes } from 'src/app/Quotes';
 })
 export class QuotesComponent {
   quotes:Quotes[] = [
-     new Quotes(1, 'Be who you are and say what you feel, because those who mind dont matter and those who matter dont mind', 'description:quoted by me'),
-    new Quotes(2, 'Be the change that you wish to see in the world', 'description:quoted by me'),
+     new Quotes(1, 'Be who you are and say what you feel, because those who mind dont matter and those who matter dont mind', 'description:quoted by nickiezer','new Date(2020,3,14','submitted by phoebe','walter'),
+    new Quotes(2, 'Be the change that you wish to see in the world', 'description:quoted by njezzy','new Date(2019,6,9','submitted by phoebe','myles'),
   ];
   addNewQuotes(quotes){
     let quotesLength = this.quotes.length;
