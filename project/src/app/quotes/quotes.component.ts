@@ -23,7 +23,7 @@ export class QuotesComponent {
 
   toggleDetails(id: number) {
     // Navigate to the quote details.
-    //
+    this.router.navigate(['quotes', id])
   }
   
   addNewQuotes(quotes) {    
