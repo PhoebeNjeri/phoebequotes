@@ -1,25 +1,28 @@
 <div class="container">
-    <h1>POST QUOTES.</h1>
-    <hr>
-    
+  <h1>POST QUOTES.</h1>
+  <hr>
 
-    <div class="row">
-        <div class="col-md-12">
-        <div *ngFor='let quotes of quotes;let i = index'>
-            <h4 id={{i}} appStrikethrough>{{quotes.id}}  {{quotes.completeDate|date|uppercase}}</h4>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor='let quote of quotes; let i = index'>
+        <h4 id={{ i }} appStrikethrough>
+          {{ quote.id }}  {{ quote.completeDate | date | uppercase }}
+        </h4>
 
-            <button  (click)='toggleDetails(i)' class="btn btn-primary">View Details</button>
-            </div>
-
-
-            <div *ngIf='quotes.description'>
-         
-          <app-quote-item  ngIf='quotes.description' [quote]='quotes' (isComplete) = 'deleteQuotes($event,i)'></app-quote-item>
-          </div>
-          </div>
-
-          <div class="col-md-12">
-
-            <app-quote-form (addQuotes)="addNewQuotes($event)"></app-quote-form>
+        <button  (click)='toggleDetails(i)' class="btn btn-primary">
+          View Details
+        </button>
+  
+        <div *ngIf="quote.description"> 
+          <app-quote-item  ngIf="quotes.description" [quote]="quotes"
+            (isComplete)="deleteQuotes($event, i)">
+          </app-quote-item>
+        </div>
+      </div>
     </div>
+
+    <div class="col-md-12">
+      <app-quote-form (addQuotes)="addNewQuotes($event)"></app-quote-form>
+    </div>
+  </div>
 </div>

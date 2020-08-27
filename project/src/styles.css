@@ -1,17 +1,20 @@
-@import "~bootstrap/dist/css/bootstrap.css"
-body{
-    background-repeat : no-repeat;
-    background-size : cover;
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  background-color: rgba(22, 160, 133, 1.0);
 }
-h1{
-    color:white;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
+
+h2 {
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center; 
 }
-.text-center{
-    color: whitesmoke;
-    font-family: 'Roboto Condensed', sans-serif;
+
+.text-center {
+  color: whitesmoke;
+  font-family: 'Roboto Condensed', sans-serif;
 }
-label{
-color: white;
+
+label {
+  color: white;
 }
